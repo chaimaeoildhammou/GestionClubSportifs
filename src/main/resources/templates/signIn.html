@@ -1,0 +1,99 @@
+﻿<!doctype html>
+<html xmlns:th="http://www.thymleaf.org" 
+xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="utf-8"/>
+		<title>S'inscrire</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.imagehandler.net/?iset=0108&img=A1004701000&fmt=png&w=50&h=50&iindex=0063&c=999&cmp=85&retblank=1x1"/>
+	</head>
+	<body class="bgded overlay" style="background-image:url('images/backgrounds/01.jpg');">
+		<div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a th:href="@{/index}">Acueill</a></li>
+          <li><a class="drop" href="#">Pages</a>
+            <ul>
+              <li><a th:href="@{/gallery}">Gallery</a></li>
+             
+            </ul>
+          </li>
+          <li><a th:href="@{/logIn}">Se Connecter</a></li>
+          <li><a th:href="@{/signIn}">S'inscrire</a></li>
+          <li><a th:href="@{/espaceManager}">Espace Manager</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+		<div class="loginBoxx">
+			<img src="images/user.png" class="user">
+			<h2>S'inscrire</h2>
+			<script type="text/javascript">
+
+
+			var fieldalias="motDePasse"
+				// On Déclare dans la variable fieldalias le type de texte entré
+
+				function verify(element1, element2)
+				// La fonction reçois en paramètre les 2 éléments
+				 {
+				  var passed=false
+				// On va donner à la variable passed la valeur false (fausse).
+
+				   if (element1.value=='')
+				// si le premier champ est vide (Propriété value vide) 
+				   {
+				    alert("Veuillez entrer votre "+fieldalias+" dans le premier champ!")
+				// c'est pas bien il faut le remplir :-)
+				// On ouvre donc une boite d'alerte grâce à la méthode alert de l'objet window
+				    element1.focus()
+				// et on y place le curseur grâce à la méthode focus
+				   }
+
+				// puis on va faire exactement la même chose pour le second champ
+				   else if (element2.value=='')
+				   {
+				    alert("Veuillez confirmer votre "+fieldalias+" dans le second champ!")
+				    element2.focus()
+				   }
+
+				   else if (element1.value!=element2.value)
+				/* Si les valeurs des 2 éléments ne sont pas égales (on utilise donc l'opérateur
+				  de comparaison d'inégalité != */
+				   {
+				    alert("Les deux "+fieldalias+" ne condordent pas")
+				// toujours la boite d'alerte
+				    element1.select()
+				// Et la on utilise la méthode select qui permet de selectionner la valeur écrite.
+				   }
+
+				   else
+				   passed=true
+				   return passed
+				 }
+</script>
+			<form th:action="@{/sign}" onSubmit="return verify(this.motDePasse1,this.motDePasse2)">
+				<p>Nom</p>
+				<input type="text" name="nom" placeholder="Name" required="required">
+				<p>Age</p>
+				<input type="text" name="age" placeholder="Entrer votre âge" required="required">
+                 <p>Sexe</p>
+                 <input type="text" name="sexe" placeholder="Male/Female" required="required">
+                 <p>Email</p>
+				<input type="text" name="email" placeholder="Entrer votre Email" required="required">
+				<p>Télé</p>
+				<input type="text" name="telephone" placeholder="Entrer votre numéro de téléphone" required="required">
+				<p>Mot de Passe</p>
+				<input type="password" name="motDePasse1"  placeholder="••••••" required="required">
+				<p>Confirmer le Mot de passe</p>
+				<input type="password" name="motDePasse2"  placeholder="••••••" required="required">
+				<input type="submit" name="" value="Se connecter">
+				
+			</form>
+		</div>
+	</body>
+</html>

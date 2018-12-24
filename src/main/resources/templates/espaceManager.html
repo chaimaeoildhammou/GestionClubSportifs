@@ -1,0 +1,47 @@
+<!doctype html>
+<html xmlns:th="http://www.thymleaf.org" 
+xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Log In</title>
+		<link rel="stylesheet" href="css/style.css"/>
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.imagehandler.net/?iset=0108&img=A1004701000&fmt=png&w=50&h=50&iindex=0063&c=999&cmp=85&retblank=1x1"/>
+	</head>
+	<body class="bgded overlay" style="background-image:url('images/backgrounds/01.jpg');">
+		<div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a th:href="@{/index}">Accueil</a></li>
+          <li><a class="drop" href="#">Pages</a>
+            <ul>
+              <li><a th:href="@{/gallery}">Gallery</a></li>
+              
+            </ul>
+          </li>
+          <li><a th:href="@{/logIn}">Se Connecter</a></li>
+          <li><a th:href="@{/signIn}">S'inscrire</a></li>
+          <li><a th:href="@{/espaceManager}">Espace Manager</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+ 
+		<div class="loginBox">
+			<img src="images/user.png" class="user">
+			<h2>Se Connecter</h2>
+			 
+			<form th:action="@{/manager}">
+				<p>Username</p>
+				<input type="text" name="nom" placeholder="Entrer le nom">
+				<p>Mot de passe</p>
+				<input type="password" name="motDePasse" placeholder="••••••">
+				<input type="submit" name=""   value="Connecter">
+				<a href="#">Mot de Passe oublié</a>
+			</form>
+		</div>
+		
+	</body>
+</html>

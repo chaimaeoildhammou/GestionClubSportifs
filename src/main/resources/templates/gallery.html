@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" 
+xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>SPS | Pages | Gallery</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link href="css/layout.css" rel="stylesheet" type="text/css" media="all"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.imagehandler.net/?iset=0108&img=A1004701000&fmt=png&w=50&h=50&iindex=0063&c=999&cmp=85&retblank=1x1"/>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/backgrounds/01.jpg');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <td width="20" align="left">
+        <a th:href="@{/index}" title="summarise application"><img src="images/user.png" width="200" height="70" border="30" ></a>
+        </td>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a th:href="@{/index}">Acceuil</a></li>
+          <li class="active"><a class="drop" href="#">Pages</a>
+            <ul>
+              <li class="active"><a th:href="@{/gallery}">Gallery</a></li>
+            
+            </ul>
+          </li>
+          <li><a th:href="@{/logIn}">Se Connecter</a></li>
+          <li><a th:href="@{/signIn}">S'inscrire</a></li>
+          <li><a th:href="@{/espaceManager}">Espace Manager</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+</div>
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <div id="gallery">
+        <figure>
+          <header class="heading">les sports proposés par notre club</header>
+          <ul class="nospace clear">
+            <li class="one_quarter first"><a href="#"><img src="images/1.jpg" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="images/2.jpg" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="images/3.jpg" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="images/4.jpg" alt=""></a></li>
+            <li class="one_quarter first"><a href="#"><img src="images/5.jpg" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="images/6.jpg" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="images/7.jpg" alt=""></a></li>
+            <li class="one_quarter"><a href="#"><img src="images/8.jpg" alt=""></a></li>
+          </ul>
+          <figcaption>Notre Gallery</figcaption>
+        </figure>
+      </div>
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <nav class="pagination">
+        <ul>
+          <li><a href="#">&laquo; Previous</a></li>
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><strong>&hellip;</strong></li>
+          <li><a href="#">6</a></li>
+          <li class="current"><strong>7</strong></li>
+          <li><a href="#">8</a></li>
+          <li><a href="#">9</a></li>
+          <li><strong>&hellip;</strong></li>
+          <li><a href="#">14</a></li>
+          <li><a href="#">15</a></li>
+          <li><a href="#">Next &raquo;</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row4 bgded overlay" style="background-image:url('images/03.jpg');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_third first">
+      <h6 class="heading">SPS</h6>
+      <nav>
+        <ul class="nospace">
+          <li><a th:href="@{index.html}"><i class="fa fa-lg fa-home"></i></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Vous pouvez nous contacter:</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Notre adresse </h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Il Irfan, Avenue Allal lfassi; Rabat, Morocco
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> SportPourSante@gmail.com</li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Contexte</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">25/05/2018</time>
+            <p class="nospace">SPS: le Sport Pour la Santé est notre projet pour la matière  (), encadrer par notre prof M.Dahchour</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">24-05-2018 à l'INPT</p>
+    <p class="fl_right">SPS est une application crée par <a target="_blank" href="#" title="deux ingénieurs WMD">Laila MADANI et Chaimae OILD HAMMOU</a> encadré par M.DAHCHOUR</p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.backtotop.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" 
+xmlns:layout="http://ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>SPS | Nouvelle Equipe </title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link href="css/layout.css" rel="stylesheet" type="text/css" media="all"/>
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.imagehandler.net/?iset=0108&img=A1004701000&fmt=png&w=50&h=50&iindex=0063&c=999&cmp=85&retblank=1x1"/>
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/bg.jpg');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <td width="20" align="left">
+        <a th:href="@{/index}" title="SPS application"><img src="images/SPS.png" width="200" height="70" border="30" /></a>
+        </td>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li><a th:href="@{/index}">Aceuill</a></li>
+          <li class="active"><a class="drop" href="#">Pages</a>
+            <ul>
+              <li><a th:href="@{/gallery}">Gallery</a></li>
+            
+            </ul>
+          </li>
+          <li class="active"><a class="drop" href="#">Connecté</a>
+          <ul>
+              <li><a th:href="@{/logIn}">Déconnecté</a></li></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div >
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      
+      <img class="imgr borderedbox inspace-5" src="images/imgr.png" alt="">
+      </br></br>
+      </div>
+		<div class="loginBox">
+			<h2>Création d'une nouvelle équipe </h2>
+			<form th:action="@{/equipeAjoutee}">
+				<p>Nom de l'équipe</p>
+				<input type="text" name="nomEquipe" required="required" placeholder="Entrer le nom de l'équipe">
+				<p>Catégorie du sport</p>
+				<input type="text" name="categorieSport" required="required" placeholder="Entrer la category">
+						<p>Le coache de l'équipe</p>
+				<input type="text" name="coachEquipe" required="required" placeholder="Enter le coache">
+				<p>Les membres de l'équipe</p>
+				<input type="text" name="membresEquipe" required="required" placeholder="Enter les membres">
+				<p>Mot de passe de l'équipe</p>
+				<input type="password" name="motDePasseEquipe" required="required" placeholder="••••••">
+				<input type="submit" name=""   value="Enregistrer">
+			</form>
+		</div>
+        <footer>
+              <ul class="nospace inline pushright">
+                <li><a class="btn" th:href="@{/calendrier}">Calendrier</a></li><br><br>
+                <li><a class="btn" th:href="@{/equipe}">Mes équipes </a></li><br><br>
+                <li><a class="btn" th:href="@{/match}">Les matches</a></li><br><br>
+                <li><a class="btn" th:href="@{/dispo}">Disponibilité</a></li><br><br>
+                <li><a class="btn" th:href="@{/notification}">Notifications</a></li><br><br>
+                <li><a class="btn1" th:href="@{/nequipe}">créer une nouvelle équipe</a></li><br><br>
+              </ul>
+            </footer>
+        <br><br>
+        <br><br>
+				<br><br><br>
+      <div id="comments">
+        <h2>Les conseils de nos coaches</h2>
+        <ul>
+          <li>
+            <article>
+              <header>
+                <figure class="avatar"><img src="images/avatar.png" alt=""></figure>
+                <address>
+               <a href="#">Yasmine IBadre</a>
+                </address>
+              </header>
+              <div class="comcont">
+                <p>Avant toute chose, assurez-vous que vous êtes aptes à la pratique du sport. Ça peut paraître trivial, mais même des sportifs de haut-niveau se sont fait diagnostiquer tard dans leur carrière des maladies rares qui auraient pu être dangereuses voire fatales.Allez donc rapidement consulter un généraliste qui pourra vous assurer que vous êtes bons pour y aller.</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                <figure class="avatar"><img src="images/avatar.png" alt=""></figure>
+                <address>
+                <a href="#">Rachid Kamal</a>
+                </address>
+              </header>
+              <div class="comcont">
+                <p>La fréquence d’entraînemente:  Idéalement 3 à 5 fois si vous avez le temps. Il y a d’ailleurs de nombreuses séances que vous pouvez fractionner en 2. Ainsi, une séance complète de près d’une heure pourra souvent être séparée en 2×30 minutes, par exemple une fois le matin et une autre le soir.
+                  Si vous manquez de temps, essayez quand même d’intercaler des séances courtes. </p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article>
+              <header>
+                <figure class="avatar"><img src="images/avatar.png" alt=""></figure>
+                <address>
+                <a href="#">Mohamed Manali</a>
+                </address>
+              </header>
+              <div class="comcont">
+                <p>On ne le dira jamais assez : la moitié la plus dure du travail n’est pas de faire de la musculation, de s’entraîner chez soi ou en salle, mais de faire attention à ce qu’on met dans son assiette.
+                   C’est un sujet long et complexe, et de nombreux livres et articles ont été rédigés à ce sujet. Pour faire (très) simple : ne mangez pas trop gras, variez votre alimentation, évitez les aliments lourds le soir avant d’aller vous coucher.</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <h2>Vous pouvez Commenter</h2>
+        <form action="#" method="post">
+          <div class="one_third first">
+            <label for="name">Nom <span>*</span></label>
+            <input type="text" name="name" id="name" value="" size="22" required>
+          </div>
+          <div class="one_third">
+            <label for="email">Email <span>*</span></label>
+            <input type="email" name="email" id="email" value="" size="22" required>
+          </div>
+          <div class="block clear">
+            <label for="comment">Votre Commentaire</label>
+            <textarea name="comment" id="comment" cols="25" rows="10"></textarea>
+          </div>
+          <div>
+            <input type="submit" name="submit" value="Soumettre" >
+            &nbsp;
+            <input type="reset" name="reset" value="Réinitialiser">
+          </div>
+        </form>
+      </div>
+      <!-- ################################################################################################ -->
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+ </div> 
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<<div class="wrapper row4 bgded overlay" style="background-image:url('images/03.jpg');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="one_third first">
+      <h6 class="heading">SPS</h6>
+      <nav>
+        <ul class="nospace">
+          <li><a th:href="@{/index}"><i class="fa fa-lg fa-home"></i></a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p>Vous pouvez nous contacter:</p>
+      <ul class="faico clear">
+        <li><a class="faicon-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a class="faicon-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="faicon-linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="faicon-google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Notre adresse </h6>
+      <ul class="nospace linklist contact">
+        <li><i class="fa fa-map-marker"></i>
+          <address>
+          Il Irfan, Avenue Allal lfassi; Rabat, Morocco
+          </address>
+        </li>
+        <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
+        <li><i class="fa fa-envelope-o"></i> SportPourSante@gmail.com</li>
+      </ul>
+    </div>
+    <div class="one_third">
+      <h6 class="heading">Contexte</h6>
+      <ul class="nospace linklist">
+        <li>
+          <article>
+            <time class="font-xs block btmspace-10" datetime="2045-04-06">25/05/2018</time>
+            <p class="nospace">SPS: le Sport Pour la Santé est notre projet pour la matière  (), encadrer par notre prof M.Dahchour</p>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">24-05-2018 à l'INPT</p>
+    <p class="fl_right">SPS est une application crée par <a target="_blank" href="#" title="deux ingénieurs WMD">Laila MADANI et Chaimae OILD HAMMOU</a> encadré par M.DAHCHOUR</p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.backtotop.js"></script>
+<script src="js/jquery.mobilemenu.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+
+</body>
+</html>
